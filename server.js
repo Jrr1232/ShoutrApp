@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
-const routes = require('./routes');
+const routes = require("./routes");
 
 // Initializes Sequelize with session store
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
@@ -32,7 +32,7 @@ const sess = {
 };
 
 app.use(session(sess));
-app.use(routes)
+app.use(routes);
 
 const hbs = exphbs.create();
 

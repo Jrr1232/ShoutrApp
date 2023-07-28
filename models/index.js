@@ -1,6 +1,4 @@
-const User = require('./User');
-const Shout = require('./Shout');
+const User = require("./User");
+const Shout = require("./Shout");
 
-
-
-module.exports = { User, Shout }
+module.exports = { User, Shout };

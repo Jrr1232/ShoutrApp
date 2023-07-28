@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Shout extends Model { }
 
@@ -9,23 +9,23 @@ Shout.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
     user_id: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     text: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
 
-    },
+    }
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'shouts',
+    modelName: "shouts"
   }
 );
 
