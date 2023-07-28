@@ -6,7 +6,7 @@ const exphbs = require("express-handlebars");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 // const { strict } = require("assert");
-// const routes = require('./controllers');
+const routes = require("./controllers");
 const sequelize = require("../project-two/config/connection");
 // const helpers = require('./utils/helpers');
 
@@ -41,8 +41,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.json({ message: "hellow world" });
+  res.json({ message: "hello world" });
 });
+
+app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>

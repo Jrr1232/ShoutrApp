@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta cahrset="UTF-8">
+    <title>SHOUTER</title>
+</head>
+
+<body>
+    <header>
+        <h1>User Registration</h1>
+        {{#if loggedin_in}}
+        <nav>
+            <button>Logout</button>
+        </nav>
+        {{/if}}
+    </header>
+    <main>
+        {{{ body }}}
+    </main>
+    <footer>
+
+    </footer>
+
+    {{#if logged_in}}
+    {{/if}}
+</body>
+
+</html>
