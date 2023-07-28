@@ -10,8 +10,8 @@ CREATE TABLE users (
 );
 
 CREATE TABLE shouts (
-    id INT PRIMARY KEY AUTO,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     text VARCHAR(30),
     user_id VARCHAR(30),
-    FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE SET NULL
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
 );
