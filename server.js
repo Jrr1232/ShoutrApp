@@ -40,10 +40,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req, res) => {
-  res.json({ message: "hello world" });
-});
-
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
