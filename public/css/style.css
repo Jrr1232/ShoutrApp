@@ -1,0 +1,57 @@
+* {
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+main {
+    margin: 20px;
+}
+
+header {
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.form-input {
+    border: 2px solid white;
+    border-radius: 5px;
+    /* background-color: white;
+    color: black; */
+    background-color: black;
+    color: white;
+    margin: 5px;
+}
+
+#login-button {
+    width: 50px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    margin: 10px 0;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+#login-button:hover {
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+}
+
+.card {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.column {
+    width: 50%;
+}
+
