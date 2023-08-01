@@ -14,8 +14,12 @@ Shout.init(
       autoIncrement: true
     },
     user_id: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
     text: {
       type: DataTypes.STRING,
