@@ -6,8 +6,9 @@ class User extends Model {
   async checkPassword (userPassword) {
     console.log("userPassword", userPassword);
     console.log("password stored", this.password);
-    const val = await bcrypt.compare(userPassword, this.password);
-    return val;
+    // const val = await bcrypt.compare(userPassword, this.password);
+    // return val;
+    return bcrypt.compareSync(userPassword, this.password);
   }
 }
 
