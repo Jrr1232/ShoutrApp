@@ -17,9 +17,9 @@ Shout.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'user',
-        key: 'id',
-      },
+        model: "user",
+        key: "id"
+      }
     },
     text: {
       type: DataTypes.STRING,
