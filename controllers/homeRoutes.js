@@ -29,4 +29,8 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/new", (req, res) => {
+  res.render("create-new-shout");
+})
+
 module.exports = router;
