@@ -40,9 +40,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req, res) => {
-  res.json({ message: "hello world" });
-});
+
+app.get('/', (req, res) => {
+  res.render('homepage', { layout: 'main' })
+})
 
 app.use(routes);
 

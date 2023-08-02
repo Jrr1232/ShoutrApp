@@ -1,4 +1,11 @@
-<div class="card">
-    <a href="/users/{{username}}">@{{username}}</a>
-    <p>{{text}}</p>
-</div>
+{{#> main}}
+  <div class="card">
+    USER: <a href="/users/{{username}}">@{{username}}</a>
+    {{#each shout}}
+  <div class="shout">
+    <p>Shout: {{text}}</p>
+  </div>
+{{/each}}
+  </div>
+{{/main}}
+

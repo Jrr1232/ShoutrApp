@@ -6,30 +6,30 @@ class Shout extends Model {
 }
 
 Shout.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
-    },
-    user_id: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    text: {
-      type: DataTypes.STRING,
-      allowNull: false
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        user_id: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        text: {
+            type: DataTypes.STRING,
+            allowNull: false
 
+        }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: "shout"
     }
-  },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "user"
-  }
 );
 
 module.exports = Shout;
