@@ -14,8 +14,10 @@ Shout.init(
             autoIncrement: true
         },
         user_id: {
-            type: DataTypes.STRING,
-            allowNull: false
+            type: DataTypes.INTEGER,
+            allowNull: false,
+
+
         },
         text: {
             type: DataTypes.STRING,

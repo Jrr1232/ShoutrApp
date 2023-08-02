@@ -3,7 +3,7 @@ const Shout = require("../../models/Shout");
 const withAuth = require("../../utils/auth");
 
 // route to create/add a shout using async/await
-router.post("/", withAuth, async (req, res) => {
+router.post("/", async (req, res) => {
     try {
         const shoutData = await Shout.create({
             user_id: req.body.user_id,
@@ -18,31 +18,28 @@ router.post("/", withAuth, async (req, res) => {
 });
 
 // route to return shout based on user_id
-router.get("/:user_id", withAuth, async (req, res) => {
+router.get("/:user_id", async (req, res) => {
     try {
         const shoutData = await Shout.findAll({
             where: {
-                user_id: req.params.user_id,
+                user_id: req.params.user_id
 
-
-
-
-            },
+            }
 
         });
         const shouter = shoutData.map((shout) => shout.get({ plain: true }));
-        const shout = shouter[0].text
-        const username = shouter[0].user_id
+        const shout = shouter[0].text;
+        const username = shouter[0].user_id;
 
-        console.log(shout)
-        console.log(username)
+        console.log(shout);
+        console.log(username);
 
         res.render("./partials/shout-details", {
             shout,
             username,
         });
     } catch (err) {
-        console.log(err)
+        console.log(err);
         res.status(500).json(err);
     }
 });
