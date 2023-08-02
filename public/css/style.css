@@ -57,6 +57,13 @@ button:hover {
     color: black;
 }
 
+input[type=text] {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
 .card {
     background-color: #333;
     padding: 10px;
