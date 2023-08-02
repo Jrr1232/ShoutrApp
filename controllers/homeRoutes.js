@@ -20,7 +20,7 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.get("/new", withAuth, (req, res) => {
+router.get("/new", (req, res) => {
   res.render("create-new-shout");
 });
 
