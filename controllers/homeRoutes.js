@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const { User } = require("../models");
+const { Shout } = require("../models");
 const withAuth = require("../utils/auth");
+
 
 router.get("/", withAuth, async (req, res) => {
   try {
@@ -28,5 +30,21 @@ router.get("/login", (req, res) => {
 
   res.render("login");
 });
+
+router.get("/home", async (req, res) => {
+  try {
+    const shoutData = await Shout.findAll();
+    const shouter = shoutData.map((shout) => shout.get({ plain: true }));
+    console.log(shouter)
+
+    res.render("homepage", { shouter });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
+
 
 module.exports = router;

@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const Shout = require("../../models/Shout");
 const withAuth = require("../../utils/auth");
+const { User } = require("../../models/User");
 
 // route to create/add a shout using async/await
 router.post("/", async (req, res) => {
@@ -23,25 +24,28 @@ router.get("/:user_id", async (req, res) => {
         const shoutData = await Shout.findAll({
             where: {
                 user_id: req.params.user_id
-
             }
-
         });
+        // const usernameData = await User.findAll({
+        //     where: {
+        //         id: req.params.user_id
+        //     }
+        // });
         const shouter = shoutData.map((shout) => shout.get({ plain: true }));
-        const shout = shouter[0].text;
-        const username = shouter[0].user_id;
+        // const username = usernameData.map((username) => username.get({ plain: true }));
 
-        console.log(shout);
-        console.log(username);
-
+        console.log(shouter);
+        // console.log(username)
         res.render("./partials/shout-details", {
-            shout,
-            username,
+            shouter,
         });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
 });
+
+
+
 
 module.exports = router;

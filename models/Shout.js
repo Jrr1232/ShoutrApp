@@ -17,7 +17,7 @@ Shout.init(
             type: DataTypes.INTEGER,
             allowNull: false,
 
-
+    
         },
         text: {
             type: DataTypes.STRING,
