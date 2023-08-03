@@ -71,7 +71,9 @@ input[type=text] {
     margin: 20px 0;
 }
 
-.column {
-    width: 50%;
+#new-shout {
+    background-color: black;
+    width: 300px;
+    height: 100px;
 }
 
