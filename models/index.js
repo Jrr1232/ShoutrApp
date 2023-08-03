@@ -1,8 +1,6 @@
 const Shout = require("./Shout");
 const User = require("./User");
 
-module.exports = { User };
-
 // Define a Driver as having one License to create a foreign key in the `license` table
 User.hasMany(Shout, {
   foreignKey: "user_id",
@@ -14,3 +12,5 @@ User.hasMany(Shout, {
 Shout.belongsTo(User, {
   foreignKey: "user_id"
 });
+
+module.exports = { User, Shout };
