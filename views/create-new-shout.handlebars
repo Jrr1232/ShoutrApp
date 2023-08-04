@@ -1,10 +1,6 @@
-<input type="text" id="myInput">
+<h2>CREATE A NEW SHOUT</h2>
+<textarea id="new-shout" maxlength="140" oninput="inputCharacter(this)"></textarea>
+<p>Character Count: <span id="character-count">0</span></p>
+<p>Max character count is 140 characters</p>
 
-<script>
-  const inputField = document.getElementById("myInput");
-
-  inputField.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    inputField.value = inputField.value.toUpperCase();
-  });
-</script>
+<script src="js/new-shout.js"></script>
