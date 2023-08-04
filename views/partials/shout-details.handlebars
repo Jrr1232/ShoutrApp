@@ -1,9 +1,11 @@
 {{#> main}}
   <div class="card">
-    USER: <a href="/users/{{username}}">@{{username}}</a>
+    {{#each username}}
+    <a href="/users/{{username}}">@{{username}}</a>
+    {{/each}}
     {{#each shouter}}
   <div class="shout">
-    <p>Shout: {{text}}</p>
+    <p>{{text}}</p>
   </div>
 {{/each}}
   </div>
