@@ -1,26 +1,19 @@
 {{#> main}}
 {{#if logged_in}}
-   <div class="card">
-    {{#each username}}
-    <a href="/users/{{username}}">@{{username}}</a>
+    {{#each shouts as |shout|}}
+    {{> shout-details}}
     {{/each}}
-    {{#each shouter}}
-  <div class="shout">
-    <p>{{text}}</p>
-  </div>
-{{/each}}
-  </div>
 {{else}}
-    <h2>WELCOME TO SHOUTER! A PLATFORM FOR SHOUTING INTO THE VOID</h2>
-    <h3>CREATE AN ACCOUNT</h3>
-    <div class="login-card">
-        <form class="form sign-up-form">
-            <div class="form-group">
-            <label for="email-signup"> email:</label>
+<h1>WELCOME TO SHOUTER! A PLATFORM FOR SHOUTING INTO THE VOID</h1>
+<h2>CREATE AN ACCOUNT</h2>
+<div class="login-card">
+    <form class="form sign-up-form">
+        <div class="form-group">
+            <label for="email-signup"> EMAIL:</label>
             <input class="form-input" type="text" id="email-signup" />
-            </div>
-            <div class="form-group">
-            <label for="password-signup">Password:</label>
+        </div>
+        <div class="form-group">
+            <label for="password-signup">PASSWORD:</label>
             <input class="form-input" type="password" id="password-signup" />
             </div>
             <div class="form-group">
@@ -30,18 +23,6 @@
     </div>
     <div>OR</div>
     <button><a href="/login">LOGIN</a></button>
-    
-   
-    <div class="card">
-    {{#each username}}
-    <a href="/users/{{username}}">@{{username}}</a>
-    {{/each}}
-    {{#each shouter}}
-  <div class="shout">
-    <p>{{text}}</p>
-  </div>
-{{/each}}
-  </div>
 {{/if}}
 
 
