@@ -1,0 +1,10 @@
+<input type="text" id="myInput">
+
+<script>
+  const inputField = document.getElementById("myInput");
+
+  inputField.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    inputField.value = inputField.value.toUpperCase();
+  });
+</script>
