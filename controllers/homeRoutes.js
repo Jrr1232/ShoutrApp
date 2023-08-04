@@ -1,5 +1,5 @@
 const router = require("express").Router();
-// const withAuth = require("../utils/auth");
+const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
@@ -20,7 +20,7 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.get("/new", (req, res) => {
+router.get("/new", withAuth, (req, res) => {
   res.render("create-new-shout");
 });
 
