@@ -1,6 +1,15 @@
 {{#if logged_in}}
-    {{#each shouts as |shout|}}
-    {{> shout-details}}
+   <div class="card">
+    {{#each username}}
+    <a href="/users/{{username}}">@{{username}}</a>
+    {{/each}}
+    {{#each shouter}}
+  <div class="shout">
+    <p>{{text}}</p>
+  </div>
+  </div>
+{{/each}}
+  </div>
     {{/each}}
 {{else}}
 <h1>WELCOME TO SHOUTER! A PLATFORM FOR SHOUTING INTO THE VOID</h1>
