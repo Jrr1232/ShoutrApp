@@ -22,6 +22,8 @@ router.get("/home", async (req, res) => {
 
     console.log(shouter);
     res.render("homepage", {
+      logged_in: req.session.logged_in
+      // shout:
       shouter,
       username
     });

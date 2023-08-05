@@ -1,4 +1,3 @@
-{{#> main}}
 {{#if logged_in}}
    <div class="card">
     {{#each username}}
@@ -10,48 +9,7 @@
   </div>
 {{/each}}
   </div>
-{{else}}
-    <h2>WELCOME TO SHOUTER! A PLATFORM FOR SHOUTING INTO THE VOID</h2>
-    <h3>CREATE AN ACCOUNT</h3>
-    <div class="login-card">
-        <form class="form sign-up-form">
-            <div class="form-group">
-            <label for="email-signup"> email:</label>
-            <input class="form-input" type="text" id="email-signup" />
-            </div>
-            <div class="form-group">
-            <label for="password-signup">Password:</label>
-            <input class="form-input" type="password" id="password-signup" />
-            </div>
-            <div class="form-group">
-            <button class="btn btn-primary" type="submit">SIGN UP</button>
-            </div>
-        </form>
-    </div>
-    <div>OR</div>
-    <button><a href="/login">LOGIN</a></button>
-    
-   
-    <div class="card">
-    {{#each username}}
-    <a href="/users/{{username}}">@{{username}}</a>
     {{/each}}
-    {{#each shouter}}
-  <div class="shout">
-    <p>{{text}}</p>
-  </div>
-{{/each}}
-  </div>
-{{/if}}
-
-
-{{/main}}
-
-
-{{#if logged_in}}
-{{#each shouts as |shout|}}
-{{> shout-details}}
-{{/each}}
 {{else}}
 <h1>WELCOME TO SHOUTER! A PLATFORM FOR SHOUTING INTO THE VOID</h1>
 <h2>CREATE AN ACCOUNT</h2>
@@ -62,16 +20,19 @@
             <input class="form-input" type="text" id="email-signup" />
         </div>
         <div class="form-group">
+            <label for="email-signup"> USERNAME:</label>
+            <input class="form-input" type="text" id="username-signup" />
+        </div>
+        <div class="form-group">
             <label for="password-signup">PASSWORD:</label>
             <input class="form-input" type="password" id="password-signup" />
         </div>
         <button class="btn btn-primary" type="submit">SIGN UP</button>
-</div>
+        <div>
+            <a>OR</a>
+            <a href="/login">CLICK HERE TO LOGIN</a>
+        </div>
     </form>
+</div>
 
-<form>
-    <a>OR</a>
-    <a href="/login">CLICK HERE TO LOGIN</a>
-</form>
 {{/if}}
-
