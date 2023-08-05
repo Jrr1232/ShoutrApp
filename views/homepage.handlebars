@@ -1,7 +1,7 @@
 {{#if logged_in}}
-{{#each shouts as |shout|}}
-{{> shout-details}}
-{{/each}}
+    {{#each shouts as |shout|}}
+    {{> shout-details}}
+    {{/each}}
 {{else}}
 <h1>WELCOME TO SHOUTER! A PLATFORM FOR SHOUTING INTO THE VOID</h1>
 <h2>CREATE AN ACCOUNT</h2>
@@ -20,9 +20,9 @@
             <input class="form-input" type="password" id="password-signup" />
         </div>
         <button class="btn btn-primary" type="submit">SIGN UP</button>
+        <a>OR</a>
+        <a href="/login">CLICK HERE TO LOGIN</a>
     </form>
 </div>
 
-<a>OR</a>
-<a href="/login">CLICK HERE TO LOGIN</a>
 {{/if}}
