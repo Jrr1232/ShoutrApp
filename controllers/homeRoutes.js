@@ -2,21 +2,20 @@ const router = require("express").Router();
 const { User } = require("../models");
 const { Shout } = require("../models");
 const { Shout, User } = require("../models");
-const withAuth = require("../utils/auth");
+// const withAuth = require("../utils/auth");
 
 router.get("/home", async (req, res) => {
   try {
     const shoutData = await Shout.findAll({
       include: [
         {
-          model: User,
+          model: User
 
-        },
-      ],
-    })
+        }
+      ]
+    });
     const userData = await User.findAll();
     const username = userData.map((user) => user.get({ plain: true }));
-
 
     const shouter = shoutData.map((shout) => shout.get({ plain: true }));
 
