@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { Shout, User } = require("../models");
-// const withAuth = require("../utils/auth");
+const withAuth = require("../utils/auth");
 
 router.get("/home", async (req, res) => {
   try {
@@ -19,7 +19,7 @@ router.get("/home", async (req, res) => {
 
     console.log(shouter);
     res.render("homepage", {
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
       // shout:
       shouter,
       username
