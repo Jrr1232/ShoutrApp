@@ -109,6 +109,16 @@ button:hover {
     color: black;
 }
 
+#logout-button {
+    background-color: var(--secondary);
+    float: right;
+    margin-top: 25px;
+}
+
+#logout-button:hover {
+    background-color: white;
+}
+
 input[type=text] {
     background-color: black;
     color: white;
