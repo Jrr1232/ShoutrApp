@@ -14,4 +14,3 @@ Shout.belongsTo(User, {
 });
 
 module.exports = { User, Shout };
-module.exports = { Shout };
