@@ -1,3 +1,8 @@
+:root {
+    --primary: #db610f;
+    --secondary: #222;
+}
+
 * {
     color: white;
     font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
@@ -23,7 +28,11 @@ main {
 header {
     margin: 0;
     padding: 10px 20px;
-    background-color: #222;
+    background-color: var(--secondary);
+}
+
+h1 {
+    background-color: var(--secondary);
 }
 
 h1, h2 {
@@ -62,8 +71,6 @@ form {
 .form-input {
     border: 2px solid white;
     border-radius: 5px;
-    /* background-color: white;
-    color: black; */
     background-color: black;
     color: white;
     margin: 5px;
@@ -87,25 +94,29 @@ button {
 
 button:hover {
     background-color: white;
-    color: black;
-    /* border: 2px solid white; */
+    color: var(--primary);
 }
 
 #login-button {
     width: 80px;
     height: 30px;
-    /* background-color: black;
-    color: white; */
     margin: 10px 0;
-    /* border: 2px solid white; */
     border-radius: 5px;
     margin-bottom: 40px;
 }
 
 #login-button:hover {
-    /* border: 2px solid white;
-    background-color: white; */
     color: black;
+}
+
+#logout-button {
+    background-color: var(--secondary);
+    float: right;
+    margin-top: 25px;
+}
+
+#logout-button:hover {
+    background-color: white;
 }
 
 input[type=text] {
@@ -116,7 +127,7 @@ input[type=text] {
 }
 
 .card {
-    background-color: #333;
+    background-color: var(--secondary);
     padding: 10px;
     border-radius: 15px;
     margin: 20px 0;

@@ -9,12 +9,12 @@
 
 <body>
     <header>
-        <img class="logo" src="/images/shouterlogo_horizontal.png">
-        {{#if loggedin_in}}
         <nav>
-            <button>Logout</button>
+            <img class="logo" src="/images/shouterlogo_horizontal.png">
+            {{#if logged_in}}
+                <button id="logout-button">Logout</button>
+            {{/if}}
         </nav>
-        {{/if}}
     </header>
     <main>
         {{{ body }}}
