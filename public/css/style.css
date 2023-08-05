@@ -1,5 +1,6 @@
 :root {
-    --primary: #333;
+    --primary: #db610f;
+    --secondary: #333;
 }
 
 * {
@@ -27,11 +28,11 @@ main {
 header {
     margin: 0;
     padding: 10px 20px;
-    background-color: var(--primary);
+    background-color: var(--secondary);
 }
 
 h1 {
-    background-color: #222;
+    background-color: var(--secondary);
 }
 
 h1, h2 {
@@ -93,7 +94,7 @@ button {
 
 button:hover {
     background-color: white;
-    color: black;
+    color: var(--primary);
 }
 
 #login-button {
@@ -116,7 +117,7 @@ input[type=text] {
 }
 
 .card {
-    background-color: var(--primary);
+    background-color: var(--secondary);
     padding: 10px;
     border-radius: 15px;
     margin: 20px 0;
