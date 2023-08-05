@@ -1,8 +1,17 @@
 {{#> main}}
 {{#if logged_in}}
-    {{#each shouts as |shout|}}
-    {{> shout-details}}
-    {{/each}}
+   
+{{#each shouter}}
+  <div class="card">
+  <div>
+  <a href="/users/{{user.username}}">@{{user.username}}</a>
+  </div>
+      <div class="shout">
+    <p>{{text}}</p>
+  </div>
+  </div>
+{{/each}}
+
 {{else}}
 <h1>WELCOME TO SHOUTER! A PLATFORM FOR SHOUTING INTO THE VOID</h1>
 <h2>CREATE AN ACCOUNT</h2>
