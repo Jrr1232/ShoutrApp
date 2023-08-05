@@ -31,10 +31,6 @@ header {
     background-color: var(--secondary);
 }
 
-h1 {
-    background-color: var(--secondary);
-}
-
 h1, h2 {
     display: flex;
     flex-wrap: wrap;
