@@ -1,7 +1,27 @@
 [
-{
-    "user_id": 1,
-    "text":"Hello World"
-}
+    {
+        "user_id": 1,
+        "text":"Hello World"
+    },
+    {
+        "user_id": 2,
+        "text":"I love JavaScript!"
+    },
+    {
+        "user_id": 3,
+        "text":"Why would anybody ever eat anything besides breakfast food?"
+    },
+    {
+        "user_id": 3,
+        "text":"What I hear when I’m being yelled at is people caring really loudly at me."
+    },
+    {
+        "user_id": 4,
+        "text":"Joey doesn’t share food!"
+    },
+    {
+        "user_id": 5,
+        "text":"BUT UMMMMM"
+    }
 ]
     
