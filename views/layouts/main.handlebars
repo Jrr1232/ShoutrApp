@@ -10,9 +10,12 @@
 <body>
     <header>
         <nav>
-            <img class="logo" src="/images/shouterlogo_horizontal.png">
+            <a href="/"><img class="logo" src="/images/shouterlogo_horizontal.png"></a>
             {{#if logged_in}}
                 <button id="logout-button">Logout</button>
+                <button id="shout-button"><a href="/new">SHOUT</a></button>
+            {{else}}
+                {{!-- <a href="/login">LOGIN</a> --}}
             {{/if}}
         </nav>
     </header>
@@ -20,13 +23,13 @@
         {{{ body }}}
     </main>
     <footer>
-
+        <p>Created by Joaquin Florencio, Hannah Rajarao, and Andre Carlo Demonteverde.</p>
     </footer>
 
-    {{#if logged_in}}
-   
-    {{/if}}
       <script src="/js/logout.js"></script>
+      <script src="/js/login.js"></script>
+      <script src="js/new-shout.js"></script>
+
 </body>
 
 </html>

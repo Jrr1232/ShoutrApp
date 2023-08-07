@@ -1,6 +1,11 @@
 <h2>CREATE A NEW SHOUT</h2>
-<textarea id="new-shout" maxlength="140" oninput="inputCharacter(this)"></textarea>
-<p>Character Count: <span id="character-count">0</span></p>
-<p>Max character count is 140 characters</p>
+<form class="new-shout-form">
+    <textarea id="new-shout" maxlength="140" oninput="inputCharacter(this)"></textarea>
+    <div>
+        <button class="btn btn-primary new-shout" type="submit">SHOUT</button>
+    </div>
+    <p>Character Count: <span id="character-count">0</span></p>
+    <p>Max character count is 140 characters</p>
+</form>
 
-<script src="js/new-shout.js"></script>
+{{!-- <script src="js/new-shout.js"></script> --}}

@@ -1,23 +1,23 @@
 [
     {
         "user_id": 1,
-        "text":"Hello World"
+        "text":"HELLO WORLD"
     },
     {
         "user_id": 2,
-        "text":"I love JavaScript!"
+        "text":"I LOVE JAVASCRIPT!"
     },
     {
         "user_id": 3,
-        "text":"Why would anybody ever eat anything besides breakfast food?"
+        "text":"WHY WOULD ANYBODY EVER EAT ANYTHING BESIDES BREAKFAST FOOD?"
     },
     {
         "user_id": 3,
-        "text":"What I hear when I’m being yelled at is people caring really loudly at me."
+        "text":"WHAT I HEAR WHEN I’M BEING YELLED AT IS PEOPLE CARING REALLY LOUDLY AT ME."
     },
     {
         "user_id": 4,
-        "text":"Joey doesn’t share food!"
+        "text":"JOEY DOESN’T SHARE FOOD!"
     },
     {
         "user_id": 5,
