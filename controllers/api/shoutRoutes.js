@@ -3,7 +3,7 @@ const { Shout, User } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // route to create/add a shout using async/await
-router.post("/", withAuth, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const shoutData = await Shout.create({
       user_id: req.body.user_id,

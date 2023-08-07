@@ -1,8 +1,16 @@
 {{#if logged_in}}
-<section class="card-container">
-{{#each shouter as |shout|}}
-{{> shout-details}}
-{{/each}}
+{{#each shouter}}
+  <div class="card">
+    <div>
+      <a href="/users/{{user.username}}">@{{user.username}}</a>
+    </div>
+    <div class="shout">
+      <p>{{text}}</p>
+     
+    </div>
+    
+  </div>
+  {{/each}}
 </section>
 
 
@@ -29,6 +37,10 @@
             <a href="/login">CLICK HERE TO LOGIN</a>
     </form>
 </div>
+  
 
 {{/if}}
+
 {{!-- <script src="../public/js/login.js"></script> --}}
+
+</section>
