@@ -4,35 +4,34 @@
     <a href="/users/{{username}}">@{{username}}</a>
     {{/each}}
     {{#each shouter}}
-  <div class="shout">
-    <p>{{text}}</p>
-  </div>
-  </div>
-{{/each}}
+        <div class="shout">
+            <p>{{text}}</p>
+        </div>
+        </div>
+    {{/each}}
   </div>
 {{else}}
-<h1>WELCOME TO SHOUTER! A PLATFORM FOR SHOUTING INTO THE VOID</h1>
-<h2>CREATE AN ACCOUNT</h2>
-<div class="login-card">
-    <form class="form sign-up-form">
-        <div class="form-group">
-            <label for="email-signup"> EMAIL:</label>
-            <input class="form-input" type="text" id="email-signup" />
-        </div>
-        <div class="form-group">
-            <label for="email-signup"> USERNAME:</label>
-            <input class="form-input" type="text" id="username-signup" />
-        </div>
-        <div class="form-group">
-            <label for="password-signup">PASSWORD:</label>
-            <input class="form-input" type="password" id="password-signup" />
-        </div>
-        <button class="btn btn-primary" type="submit">SIGN UP</button>
-        <div>
-            <a>OR</a>
-            <a href="/login">CLICK HERE TO LOGIN</a>
-        </div>
-    </form>
-</div>
-
+    <h1>WELCOME TO SHOUTER! A PLATFORM FOR SHOUTING INTO THE VOID</h1>
+    <h2>CREATE AN ACCOUNT</h2>
+    <div class="login-card">
+        <form class="form sign-up-form">
+            <div class="form-group">
+                <label for="email-signup"> EMAIL:</label>
+                <input class="form-input" type="text" id="email-signup" />
+            </div>
+            <div class="form-group">
+                <label for="email-signup"> USERNAME:</label>
+                <input class="form-input" type="text" id="username-signup" />
+            </div>
+            <div class="form-group">
+                <label for="password-signup">PASSWORD:</label>
+                <input class="form-input" type="password" id="password-signup" />
+            </div>
+            <button class="btn btn-primary" type="submit">SIGN UP</button>
+            <div>
+                <a>OR</a>
+                <a href="/login">CLICK HERE TO LOGIN</a>
+            </div>
+        </form>
+    </div>
 {{/if}}
