@@ -105,6 +105,15 @@ button:hover {
     margin-bottom: 40px;
 }
 
+#nav-options {
+    float: right;
+}
+
+#create-new-shout-button {
+    text-decoration: none;
+    font-size: 32pt;
+}
+
 #logout-button {
     background-color: var(--secondary);
     float: right;

@@ -10,9 +10,12 @@
 <body>
     <header>
         <nav>
-            <img class="logo" src="/images/shouterlogo_horizontal.png">
+            <a href="/"><img class="logo" src="/images/shouterlogo_horizontal.png"></a>
             {{#if logged_in}}
+            <div id="nav-options">
+                <a href="/new" id="create-new-shout-button">+</a>
                 <button id="logout-button">Logout</button>
+            </div>
             {{/if}}
         </nav>
     </header>
@@ -22,11 +25,7 @@
     <footer>
 
     </footer>
-
-    {{#if logged_in}}
-   
-    {{/if}}
-      <script src="/js/logout.js"></script>
+    <script src="/js/logout.js"></script>
 </body>
 
 </html>
