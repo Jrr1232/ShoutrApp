@@ -20,7 +20,6 @@ router.get("/home", async (req, res) => {
     console.log(shouter);
     res.render("homepage", {
       logged_in: req.session.logged_in,
-      // shout:
       shouter,
       username
     });
@@ -32,7 +31,7 @@ router.get("/home", async (req, res) => {
 
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/");
+    res.redirect("/home");
     return;
   }
 
