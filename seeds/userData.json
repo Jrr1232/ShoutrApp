@@ -4,5 +4,25 @@
       "username": "Rutgers",
       "email": "rutgers@hotmail.com",
       "password": "rutgers12345"
+    },
+    {
+      "username": "John",
+      "email": "john@doe.com",
+      "password": "johnabon"
+    },
+    {
+      "username": "Leslie",
+      "email": "leslieknope@parksandrec.com",
+      "password": "firstfemalepresident"
+    },
+    {
+      "username": "Joey",
+      "email": "joey@gmail.com",
+      "password": "howyoudoin"
+    },
+    {
+      "username": "Robin",
+      "email": "robin@metronews1.com",
+      "password": "bluefrenchhorn"
     }
 ]
