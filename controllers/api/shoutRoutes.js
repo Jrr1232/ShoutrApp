@@ -37,9 +37,11 @@ router.get("/:user_id", withAuth, async (req, res) => {
       }
     });
 
-    const shouter = shoutData.map((shout) => shout.get({ plain: true }));
-    const username = userData.map((user) => user.get({ plain: true }));
-    console.log(shouter);
+    const shouter = shoutData.map((shout) =>
+      shout.get({ plain: true }));
+    const username = userData.map((user) =>
+      user.get({ plain: true }));
+    // console.log(shouter);
 
     res.render("./partials/shout-details", {
       shouter,

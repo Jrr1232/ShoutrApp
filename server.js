@@ -2,12 +2,12 @@ const path = require("path");
 const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
+const routes = require("./controllers");
 // Initializes Sequelize with session store
+const sequelize = require("../project-two/config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 // const { strict } = require("assert");
-const routes = require("./controllers");
-const sequelize = require("../project-two/config/connection");
 // const helpers = require('./utils/helpers');
 
 const app = express();
@@ -40,9 +40,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req, res) => {
-  res.render("homepage", { layout: "main" });
-});
+// app.get("/", (req, res) => {
+//   res.render("homepage", { layout: "main" });
+// });
 
 app.use(routes);
 

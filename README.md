@@ -26,9 +26,23 @@ SHOUTER is a text-based social media site where users can share text posts and b
 
 * It's done when the user's SHOUT gets added to the SHOUTs feed
 
+## Installation
+
+Install with npm:
+
+```sh
+$ npm install -g npm
+```
+
 ## Assets
 
 The following image demonstrates the web application's appearance and functionality: 
+
+![alt text](public\images\shouter_homepage.png)
+
+![alt text](public\images\shouter_shoutfeed.png)
+
+![alt text](public\images\shouter_newshout.png)
 
 ## Collaborators
 
