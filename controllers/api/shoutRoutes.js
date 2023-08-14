@@ -42,7 +42,7 @@ router.get("/:user_id", async (req, res) => {
     const username = userData.map((user) =>
       user.get({ plain: true }));
     console.log(shouter);
-    console.log(username)
+    console.log(username);
 
     res.render("./partials/shout-details", {
       shouter,
