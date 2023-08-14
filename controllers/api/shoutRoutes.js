@@ -17,7 +17,7 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-router.get("/:user_id", withAuth, async (req, res) => {
+router.get("/:user_id", async (req, res) => {
   try {
     const shoutData = await Shout.findAll({
       include: [
@@ -41,7 +41,8 @@ router.get("/:user_id", withAuth, async (req, res) => {
       shout.get({ plain: true }));
     const username = userData.map((user) =>
       user.get({ plain: true }));
-    // console.log(shouter);
+    console.log(shouter);
+    console.log(username)
 
     res.render("./partials/shout-details", {
       shouter,

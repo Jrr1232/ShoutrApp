@@ -1,4 +1,4 @@
-function inputCharacter (elem) { // eslint-disable-line no-unused-vars
+function inputCharacter(elem) { // eslint-disable-line no-unused-vars
   elem.value = elem.value.toUpperCase();
   const characterCount = elem.value.length;
   document.querySelector("#character-count").innerHTML = characterCount;
@@ -12,7 +12,10 @@ const postNewShout = async (event) => {
   if (text) {
     const response = await fetch("/api/shouts", {
       method: "POST",
-      body: JSON.stringify({ text }),
+      body: JSON.stringify({
+        user_id: 4,
+        text
+      }),
       headers: { "Content-Type": "application/json" }
     });
 
