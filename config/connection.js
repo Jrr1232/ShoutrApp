@@ -3,7 +3,7 @@ require("dotenv").config();
 let sequelize = "";
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(
-    "  mysql://dclmn62ol4j95g2m:s0v8gevgdz4g9p6q@rwo5jst0d7dgy0ri.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/vw37u7v3v7liwmz1");
+    " mysql://o1z5vx9whktc37c0:iran3dtzuykendx7@i0rgccmrx3at3wv3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/edp9jmtoq4c5moa1");
 } else {
   sequelize = new Sequelize(
     process.env.DB_NAME,
