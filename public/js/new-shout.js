@@ -10,7 +10,8 @@ const postNewShout = async (event) => {
   const text = document.querySelector("#new-shout").value.trim();
 
   if (text) {
-    const response = await fetch("/api/shouts", {
+    const response = await fetch("http://localhost:3001/api/shouts", {
+
       method: "POST",
       body: JSON.stringify({
         user_id: 4,
