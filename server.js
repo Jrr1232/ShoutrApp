@@ -4,7 +4,7 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 // Initializes Sequelize with session store
-const sequelize = require("../project-two/config/connection");
+const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 // const { strict } = require("assert");
